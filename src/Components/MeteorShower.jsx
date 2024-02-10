@@ -10,8 +10,8 @@ function MeteorShower() {
     const [isRoundCompletato, setIsRoundCompletato] = useState(false);
     const [currentRound, setCurrentRound] = useState(1);
     const [intervalloSpawnMeteore, setIntervalloSpawnMeteore] = useState(5000);
-    /*   const input = useRef(null); */
-
+    /*     const [intervalIdTimer, setIntervalIdTimer] = useState(null);
+    const [intervalMeteore, setIntervalMeteore] = useState(null); */
     let intervalIdTimer;
     let intervalMeteore;
 
@@ -47,10 +47,10 @@ function MeteorShower() {
     }, [isActive]);
 
     useEffect(() => {
-        if (countMeteors > 2) {
+        if (countMeteors > 15) {
             fineDelRound();
         }
-    }, [countMeteors, intervalloSpawnMeteore]);
+    }, [countMeteors]);
 
     const fineDelRound = () => {
         clearInterval(intervalMeteore);
