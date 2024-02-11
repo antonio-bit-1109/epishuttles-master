@@ -1,36 +1,38 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Meteor from "./Meteor";
+import { useSelector, useDispatch } from "react-redux";
+import { setArrayMeteoriti, setDeleteMeteorite } from "../redux/reducers/StateSliceReducers";
 
 function MeteorShower() {
-    const [meteorList, setMeteorList] = useState([]);
-    console.log("meteorList", meteorList);
+    /*   const [meteorList, setMeteorList] = useState([]);
+    console.log("meteorList", meteorList); */
+
+    const dispatch = useDispatch();
+    const MeteorList = useSelector((state) => state.MySlice.MeteorList);
+    console.log("MeteorList", MeteorList);
+
     const [countMeteors, setCountMeteors] = useState(0);
     const [secondi, setSecondi] = useState(0);
     const [isActive, setIsActive] = useState(false);
     const [isRoundCompletato, setIsRoundCompletato] = useState(false);
     const [currentRound, setCurrentRound] = useState(1);
-    const [intervalloSpawnMeteore, setIntervalloSpawnMeteore] = useState(5000);
-    /*     const [intervalIdTimer, setIntervalIdTimer] = useState(null);
-    const [intervalMeteore, setIntervalMeteore] = useState(null); */
+    const [intervalloSpawnMeteore, setIntervalloSpawnMeteore] = useState(3000);
+
     let intervalIdTimer;
     let intervalMeteore;
 
     function generateRandomNumber() {
-        return Math.floor(Math.random() * 80) + 5;
+        return Math.floor(Math.random() * 60) + 5;
     }
-
-    const handleSpawnMeteore = () => {
-        return intervalloSpawnMeteore;
-    };
 
     useEffect(() => {
         if (isActive) {
             intervalMeteore = setInterval(() => {
                 const newPosition = generateRandomNumber();
                 const newMeteor = <Meteor key={Date.now()} position={newPosition} />;
-                setMeteorList((prevList) => [...prevList, newMeteor]);
+                dispatch(setArrayMeteoriti(newMeteor));
                 setCountMeteors((prevCount) => prevCount + 1);
-            }, handleSpawnMeteore());
+            }, intervalloSpawnMeteore);
 
             intervalIdTimer = setInterval(() => {
                 setSecondi((prevSecondi) => prevSecondi + 1);
@@ -40,14 +42,14 @@ function MeteorShower() {
         return () => {
             clearInterval(intervalMeteore);
             clearInterval(intervalIdTimer);
-            setMeteorList([]);
+            dispatch(setDeleteMeteorite());
             setCountMeteors(0);
             setSecondi(0);
         };
     }, [isActive]);
 
     useEffect(() => {
-        if (countMeteors > 15) {
+        if (countMeteors > 10) {
             fineDelRound();
         }
     }, [countMeteors]);
@@ -55,7 +57,7 @@ function MeteorShower() {
     const fineDelRound = () => {
         clearInterval(intervalMeteore);
         clearInterval(intervalIdTimer);
-        setMeteorList([]);
+        dispatch(setDeleteMeteorite());
         setCountMeteors(0);
         setSecondi(0);
         setIsRoundCompletato(true);
@@ -89,11 +91,7 @@ function MeteorShower() {
                 </div>
             )}
 
-            <div>
-                {meteorList.map((meteor, index) => (
-                    <div key={index}>{meteor}</div>
-                ))}
-            </div>
+            <div> {MeteorList && MeteorList.map((meteor, index) => <div key={index}>{meteor}</div>)}</div>
         </>
     );
 }

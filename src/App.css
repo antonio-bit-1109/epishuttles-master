@@ -1,64 +1,327 @@
 .App {
-  background-image: url(./space.avif);
-  height: 100vh;
-  overflow: hidden;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-img.fire {
-  transform: rotate(90deg) scaleY(1.2) scaleX(1.5);
+    background-image: url(./space.avif);
+    height: 100vh;
+    overflow: hidden;
 }
 .App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
-div.on-fire {
-  position: absolute;
-  top: 42%;
-  left: 80px;
-  animation: Meteor-spin 20s linear infinite;
+.on-fire {
+    position: absolute;
+    top: 42%;
+    left: 80px;
+    animation: Meteor-spin 20s linear infinite;
 }
-#Meteor-animation {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  transform: translateX(100vw);
-
-  animation: Meteor-transition infinite 5s linear;
-}
-@keyframes Meteor-transition {
-  from {
+/* #Meteor-animation {
+    position: relative;
+    margin: 0;
+    padding: 0;
     transform: translateX(100vw);
-  }
 
-  to {
-    transform: translateX(-20vw);
-  }
+    animation: Meteor-transition infinite 5s linear;
+} */
+
+.Meteor-animation {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: Meteor-transition infinite 5s linear;
+}
+
+.fire {
+    position: absolute;
+    width: 20px; /* larghezza del fuoco */
+    height: 20px; /* altezza del fuoco */
+    background: url("./fire.gif") no-repeat center center;
+    background-size: cover;
+}
+
+.meteor {
+    position: absolute;
+    width: 70px; /* larghezza dell'asteroide */
+    height: 70px; /* altezza dell'asteroide */
+    background: url("./meteor.png") no-repeat center center;
+    background-size: cover;
+}
+
+/* Distribuzione dei fuochi attorno all'asteroide */
+.fire:nth-child(1) {
+    top: -5%;
+    left: 14%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+}
+.fire:nth-child(2) {
+    top: -15%;
+    left: 22%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    rotate: 20deg;
+}
+.fire:nth-child(3) {
+    top: -10%;
+    left: 29%;
+    z-index: 9;
+    transform: rotate(35deg); /* Rotazione progressiva */
+    width: 150px;
+    height: 150px;
+}
+.fire:nth-child(4) {
+    top: 5%;
+    left: 33%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(65deg);
+}
+.fire:nth-child(5) {
+    top: 8%;
+    left: 38%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(80deg);
+}
+.fire:nth-child(6) {
+    top: 15%;
+    left: 45%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(90deg);
+    background-color: transparent;
+}
+.fire:nth-child(7) {
+    top: 20%;
+    left: 48%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(100deg);
+}
+.fire:nth-child(8) {
+    top: 29%;
+    left: 41%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(110deg);
+}
+.fire:nth-child(9) {
+    top: 29%;
+    left: 41%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(110deg);
+}
+.fire:nth-child(10) {
+    top: 39%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(120deg);
+}
+.fire:nth-child(11) {
+    top: 44%;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(130deg);
+}
+.fire:nth-child(12) {
+    top: 49%;
+    left: 30%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(145deg);
+}
+.fire:nth-child(13) {
+    top: 49%;
+    left: 22%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(155deg);
+}
+.fire:nth-child(14) {
+    top: 50%;
+    left: 15%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(165deg);
+}
+.fire:nth-child(15) {
+    top: 50%;
+    left: 15%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(175deg);
+}
+.fire:nth-child(16) {
+    top: 52%;
+    left: 8%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(190deg);
+}
+.fire:nth-child(17) {
+    top: 49%;
+    left: 3%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(200deg);
+}
+.fire:nth-child(18) {
+    top: 45%;
+    left: -3%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(210deg);
+}
+.fire:nth-child(19) {
+    top: 40%;
+    left: -3%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(220deg);
+}
+.fire:nth-child(20) {
+    top: 38%;
+    left: -7%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(230deg);
+}
+.fire:nth-child(21) {
+    top: 33%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(240deg);
+}
+.fire:nth-child(22) {
+    top: 28%;
+    left: -10%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(250deg);
+}
+.fire:nth-child(23) {
+    top: 20%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(265deg);
+}
+.fire:nth-child(24) {
+    top: 15%;
+    left: -3%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(275deg);
+}
+.fire:nth-child(25) {
+    top: 10%;
+    left: -3%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(285deg);
+}
+.fire:nth-child(26) {
+    top: 5%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(295deg);
+}
+.fire:nth-child(27) {
+    top: -3%;
+    left: -5%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(305deg);
+}
+
+.fire:nth-child(28) {
+    top: -8%;
+    left: 0%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(315deg);
+}
+
+.fire:nth-child(29) {
+    top: -10%;
+    left: 5%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(330deg);
+}
+
+.fire:nth-child(30) {
+    top: -15%;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    z-index: 9;
+    transform: rotate(345deg);
+}
+
+@keyframes Meteor-transition {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(-20vw);
+    }
 }
 
 @keyframes Meteor-spin {
-  from {
-    transform: rotate(360deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.top-custom {
+    top: 38% !important;
+}
+
+.start-custom {
+    left: 34% !important;
 }
