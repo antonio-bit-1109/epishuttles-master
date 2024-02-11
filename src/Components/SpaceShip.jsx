@@ -12,9 +12,6 @@ const SpaceShip = () => {
 
     useEffect(() => {
         window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-            window.removeEventListener("mousemove", handleMouseMove);
-        };
     }, []);
 
     useEffect(() => {
