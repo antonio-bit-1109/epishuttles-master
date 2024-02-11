@@ -63,17 +63,17 @@
     z-index: 9;
 }
 .fire:nth-child(2) {
-    top: -5%;
+    top: 5%;
     left: 22%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 19;
     rotate: 20deg;
 }
 .fire:nth-child(3) {
-    top: -10%;
+    top: 3%;
     left: 29%;
-    z-index: 9;
+    z-index: 19;
     transform: rotate(35deg); /* Rotazione progressiva */
     width: 150px;
     height: 150px;
