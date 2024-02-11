@@ -27,6 +27,7 @@ function MeteorShower() {
 
     useEffect(() => {
         if (isActive) {
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             intervalMeteore = setInterval(() => {
                 const newPosition = generateRandomNumber();
                 const newMeteor = <Meteor key={Date.now()} position={newPosition} />;
@@ -34,6 +35,7 @@ function MeteorShower() {
                 setCountMeteors((prevCount) => prevCount + 1);
             }, intervalloSpawnMeteore);
 
+            // eslint-disable-next-line react-hooks/exhaustive-deps
             intervalIdTimer = setInterval(() => {
                 setSecondi((prevSecondi) => prevSecondi + 1);
             }, 1000);
@@ -52,6 +54,7 @@ function MeteorShower() {
         if (countMeteors > 10) {
             fineDelRound();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [countMeteors]);
 
     const fineDelRound = () => {
