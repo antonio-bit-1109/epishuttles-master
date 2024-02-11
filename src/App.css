@@ -56,14 +56,14 @@
 
 /* Distribuzione dei fuochi attorno all'asteroide */
 .fire:nth-child(1) {
-    top: -5%;
+    top: 5%;
     left: 14%;
     width: 150px;
     height: 150px;
     z-index: 9;
 }
 .fire:nth-child(2) {
-    top: -15%;
+    top: -5%;
     left: 22%;
     width: 150px;
     height: 150px;
@@ -264,17 +264,18 @@
     transform: rotate(295deg);
 }
 .fire:nth-child(27) {
-    top: -3%;
-    left: -5%;
+    top: 6%;
+    left: -7%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 11;
     transform: rotate(305deg);
+    /* background-color: red; */
 }
 
 .fire:nth-child(28) {
-    top: -8%;
-    left: 0%;
+    top: 5%;
+    left: -6%;
     width: 150px;
     height: 150px;
     z-index: 9;
@@ -282,8 +283,8 @@
 }
 
 .fire:nth-child(29) {
-    top: -10%;
-    left: 5%;
+    top: 1%;
+    left: 2%;
     width: 150px;
     height: 150px;
     z-index: 9;
@@ -291,7 +292,7 @@
 }
 
 .fire:nth-child(30) {
-    top: -15%;
+    top: 2%;
     left: 10%;
     width: 150px;
     height: 150px;

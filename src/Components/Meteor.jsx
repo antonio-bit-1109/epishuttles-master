@@ -4,7 +4,10 @@ import fire from "../fire.gif"; */
 
 function Meteor({ position }) {
     return (
-        <div className="Meteor-animation position-relative" style={{ position: "absolute", top: `${position}%` }}>
+        <div
+            className="Meteor-animation position-relative d-inline-block"
+            style={{ position: "absolute", top: `${position}%` }}
+        >
             <div className="fire"></div>
             <div className="fire"></div>
             <div className="fire"></div>

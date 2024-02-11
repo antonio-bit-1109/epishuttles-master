@@ -11,7 +11,7 @@ const SliceMain = createSlice({
             state.MeteorList = [...state.MeteorList, action.payload];
         },
 
-        setDeleteMeteorite: (state, action) => {
+        setDeleteMeteorite: (state) => {
             state.MeteorList = [];
         },
     },
