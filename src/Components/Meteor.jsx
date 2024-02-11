@@ -1,6 +1,4 @@
-import React from "react";
-/* import meteor from "../meteor.png";
-import fire from "../fire.gif"; */
+import React, { useState } from "react";
 
 function Meteor({ position }) {
     return (

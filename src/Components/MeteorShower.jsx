@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Meteor from "./Meteor";
 import { useSelector, useDispatch } from "react-redux";
 import { setArrayMeteoriti, setDeleteMeteorite } from "../redux/reducers/StateSliceReducers";
