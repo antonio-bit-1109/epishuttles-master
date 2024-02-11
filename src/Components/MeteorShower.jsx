@@ -78,7 +78,12 @@ function MeteorShower() {
                 <div className="text-light justify-content-center d-flex flex-column align-items-center">
                     <h2 className="display-2">Time : {secondi}</h2>
                     <button
-                        onClick={() => {
+                        /* onClick={() => {
+                            setIsActive(!isActive);
+                            setCurrentRound(1);
+                        }} */
+
+                        onMouseEnter={() => {
                             setIsActive(!isActive);
                             setCurrentRound(1);
                         }}

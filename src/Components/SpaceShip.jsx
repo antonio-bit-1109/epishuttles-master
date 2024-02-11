@@ -23,35 +23,33 @@ const SpaceShip = () => {
 
     return (
         <div>
-            <div className="position-relative">
-                <img
-                    src={fire}
-                    alt="fire"
-                    style={{
-                        position: "absolute",
-                        left: mousePosition.x - 70,
-                        top: mousePosition.y,
-                        width: "100px",
-                        height: "100px",
-                        backgroundColor: "transparent",
-                        transform: "rotate(270deg)",
-                    }}
-                />
+            <img
+                src={fire}
+                alt="fire"
+                style={{
+                    position: "absolute",
+                    left: mousePosition.x - 70,
+                    top: mousePosition.y,
+                    width: "100px",
+                    height: "100px",
+                    backgroundColor: "transparent",
+                    transform: "rotate(270deg)",
+                }}
+            />
 
-                <img
-                    style={{
-                        position: "absolute",
-                        left: mousePosition.x,
-                        top: mousePosition.y,
-                        width: "100px",
-                        height: "100px",
-                        backgroundColor: "transparent",
-                        transform: "rotate(45deg)",
-                    }}
-                    src={shuttle}
-                    alt=""
-                />
-            </div>
+            <img
+                style={{
+                    position: "absolute",
+                    left: mousePosition.x,
+                    top: mousePosition.y,
+                    width: "100px",
+                    height: "100px",
+                    backgroundColor: "transparent",
+                    transform: "rotate(45deg)",
+                }}
+                src={shuttle}
+                alt=""
+            />
         </div>
     );
 };
