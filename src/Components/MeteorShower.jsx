@@ -27,9 +27,9 @@ function MeteorShower() {
 
     useEffect(() => {
         /* gioco avviato dopo 1 secondo */
-        setTimeout(() => {
+        /*         setTimeout(() => {
             setIsActive(true);
-        }, 1000);
+        }, 1000); */
         if (isActive) {
             // eslint-disable-next-line react-hooks/exhaustive-deps
             intervalMeteore = setInterval(() => {

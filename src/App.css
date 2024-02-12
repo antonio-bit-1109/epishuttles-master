@@ -3,40 +3,17 @@
     height: 100vh;
     overflow: hidden;
 }
-.App-header {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-.on-fire {
-    position: absolute;
-    top: 42%;
-    left: 80px;
-    animation: Meteor-spin 20s linear infinite;
-}
-/* #Meteor-animation {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    transform: translateX(100vw);
-
-    animation: Meteor-transition infinite 5s linear;
-} */
 
 .fire {
     position: absolute;
-    width: 20px; /* larghezza del fuoco */
-    height: 20px; /* altezza del fuoco */
+    width: 20px;
+    height: 20px;
     background: url("./fire.gif") no-repeat center center;
     background-size: cover;
+}
+
+.vieniInSuperfice {
+    z-index: 999;
 }
 
 .meteor {
@@ -297,7 +274,7 @@
     position: relative;
     width: 200px;
     height: 200px;
-    animation: Meteor-transition infinite 50s linear;
+    animation: Meteor-transition infinite 5s linear;
 }
 
 @keyframes Meteor-transition {
