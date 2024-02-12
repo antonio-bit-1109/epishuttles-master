@@ -26,6 +26,10 @@ function MeteorShower() {
     }
 
     useEffect(() => {
+        /* gioco avviato dopo 1 secondo */
+        setTimeout(() => {
+            setIsActive(true);
+        }, 1000);
         if (isActive) {
             // eslint-disable-next-line react-hooks/exhaustive-deps
             intervalMeteore = setInterval(() => {
@@ -78,15 +82,14 @@ function MeteorShower() {
                 <div className="text-light justify-content-center d-flex flex-column align-items-center">
                     <h2 className="display-2">Time : {secondi}</h2>
                     <button
-                        /* onClick={() => {
+                    /* onClick={() => {
                             setIsActive(!isActive);
                             setCurrentRound(1);
                         }} */
-
-                        onMouseEnter={() => {
+                    /*  onMouseEnter={() => {
                             setIsActive(!isActive);
                             setCurrentRound(1);
-                        }}
+                        }} */
                     >
                         {isActive ? "Riavvia" : "Start"}
                     </button>

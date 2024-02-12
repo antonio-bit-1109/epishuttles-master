@@ -7,16 +7,11 @@ const SpaceShip = () => {
 
     const handleMouseMove = (e) => {
         setMouseposition({ x: e.clientX, y: e.clientY });
-        console.log(e.clientX, e.clientY);
     };
 
     useEffect(() => {
         window.addEventListener("mousemove", handleMouseMove);
     }, []);
-
-    useEffect(() => {
-        console.log("POSIZIONE SHUTTLE");
-    }, [mousePosition.x, mousePosition.y]);
 
     return (
         <div>
@@ -38,7 +33,7 @@ const SpaceShip = () => {
                 alt="fire"
                 style={{
                     position: "absolute",
-                    left: mousePosition.x - 100,
+                    left: mousePosition.x - 80,
                     top: mousePosition.y - 40,
                     width: "100px",
                     height: "100px",
