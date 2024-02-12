@@ -1,15 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Meteor from "./Meteor";
 import { useSelector, useDispatch } from "react-redux";
 import { setArrayMeteoriti, setDeleteMeteorite } from "../redux/reducers/StateSliceReducers";
-import { IsSpaceShipVisibleOFF, IsSpaceShipVisibleON } from "../redux/reducers/StateSliceReducers";
+import { IsSpaceShipVisibleON } from "../redux/reducers/StateSliceReducers";
 function MeteorShower() {
-    /*   const [meteorList, setMeteorList] = useState([]);
-    console.log("meteorList", meteorList); */
-
     const dispatch = useDispatch();
     const MeteorList = useSelector((state) => state.MySlice.MeteorList);
-    const naveVisibile = useSelector((state) => state.MySlice.IsSpaceShipVisible);
     console.log("MeteorList", MeteorList);
 
     const [countMeteors, setCountMeteors] = useState(0);
@@ -77,7 +73,7 @@ function MeteorShower() {
             <div className="d-flex align-items-center justify-content-around">
                 <div className="text-light fs-3">Round in corso: {currentRound}</div>
                 <div className="text-light justify-content-center d-flex flex-column align-items-center">
-                    <h2 className="display-2">Time : {secondi}</h2>
+                    <h2 className="display-2">Punteggio : {secondi}</h2>
                     <button
                         onClick={() => {
                             setIsActive(!isActive);
