@@ -86,7 +86,7 @@ function MeteorShower() {
                             setIsActive(!isActive);
                             setCurrentRound(1);
                         }} */
-                    /*  onMouseEnter={() => {
+                    /* onMouseEnter={() => {
                             setIsActive(!isActive);
                             setCurrentRound(1);
                         }} */
