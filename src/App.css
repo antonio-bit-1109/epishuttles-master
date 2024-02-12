@@ -31,13 +31,6 @@
     animation: Meteor-transition infinite 5s linear;
 } */
 
-.Meteor-animation {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    animation: Meteor-transition infinite 5s linear;
-}
-
 .fire {
     position: absolute;
     width: 20px; /* larghezza del fuoco */
@@ -298,6 +291,13 @@
     height: 150px;
     z-index: 9;
     transform: rotate(345deg);
+}
+
+.Meteor-animation {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    animation: Meteor-transition infinite 50s linear;
 }
 
 @keyframes Meteor-transition {

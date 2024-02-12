@@ -3,6 +3,9 @@ import React, { useState } from "react";
 function Meteor({ position }) {
     return (
         <div
+            /* onMouseEnter={() => {
+                console.log("ciao");
+            }} */
             className="Meteor-animation position-relative d-inline-block"
             style={{ position: "absolute", top: `${position}%` }}
         >
