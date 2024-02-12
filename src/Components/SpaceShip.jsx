@@ -25,8 +25,21 @@ const SpaceShip = () => {
                 alt="fire"
                 style={{
                     position: "absolute",
-                    left: mousePosition.x - 70,
-                    top: mousePosition.y,
+                    left: mousePosition.x - 110,
+                    top: mousePosition.y - 40,
+                    width: "100px",
+                    height: "100px",
+                    backgroundColor: "transparent",
+                    transform: "rotate(270deg)",
+                }}
+            />
+            <img
+                src={fire}
+                alt="fire"
+                style={{
+                    position: "absolute",
+                    left: mousePosition.x - 100,
+                    top: mousePosition.y - 40,
                     width: "100px",
                     height: "100px",
                     backgroundColor: "transparent",
@@ -37,8 +50,8 @@ const SpaceShip = () => {
             <img
                 style={{
                     position: "absolute",
-                    left: mousePosition.x,
-                    top: mousePosition.y,
+                    left: mousePosition.x - 50,
+                    top: mousePosition.y - 40,
                     width: "100px",
                     height: "100px",
                     backgroundColor: "transparent",
