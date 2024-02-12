@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import Meteor from "./Meteor";
 import { useSelector, useDispatch } from "react-redux";
 import { setArrayMeteoriti, setDeleteMeteorite } from "../redux/reducers/StateSliceReducers";
-
+import { IsSpaceShipVisibleOFF, IsSpaceShipVisibleON } from "../redux/reducers/StateSliceReducers";
 function MeteorShower() {
     /*   const [meteorList, setMeteorList] = useState([]);
     console.log("meteorList", meteorList); */
 
     const dispatch = useDispatch();
     const MeteorList = useSelector((state) => state.MySlice.MeteorList);
+    const naveVisibile = useSelector((state) => state.MySlice.IsSpaceShipVisible);
     console.log("MeteorList", MeteorList);
 
     const [countMeteors, setCountMeteors] = useState(0);
@@ -26,10 +27,6 @@ function MeteorShower() {
     }
 
     useEffect(() => {
-        /* gioco avviato dopo 1 secondo */
-        /*         setTimeout(() => {
-            setIsActive(true);
-        }, 1000); */
         if (isActive) {
             // eslint-disable-next-line react-hooks/exhaustive-deps
             intervalMeteore = setInterval(() => {
@@ -82,14 +79,10 @@ function MeteorShower() {
                 <div className="text-light justify-content-center d-flex flex-column align-items-center">
                     <h2 className="display-2">Time : {secondi}</h2>
                     <button
-                    /* onClick={() => {
+                        onClick={() => {
                             setIsActive(!isActive);
-                            setCurrentRound(1);
-                        }} */
-                    /* onMouseEnter={() => {
-                            setIsActive(!isActive);
-                            setCurrentRound(1);
-                        }} */
+                            dispatch(IsSpaceShipVisibleON());
+                        }}
                     >
                         {isActive ? "Riavvia" : "Start"}
                     </button>

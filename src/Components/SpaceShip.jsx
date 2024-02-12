@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import shuttle from "../shuttle.png";
 import fire from "../fire.gif";
+import { useSelector } from "react-redux";
 
 const SpaceShip = () => {
     const [mousePosition, setMouseposition] = useState({ x: 0, y: 0 });
+    const naveVisibile = useSelector((state) => state.MySlice.IsSpaceShipVisible);
 
     const handleMouseMove = (e) => {
         setMouseposition({ x: e.clientX, y: e.clientY });
@@ -26,6 +28,7 @@ const SpaceShip = () => {
                     height: "100px",
                     backgroundColor: "transparent",
                     transform: "rotate(270deg)",
+                    display: !naveVisibile ? "none" : "block",
                 }}
             />
             <img
@@ -39,6 +42,7 @@ const SpaceShip = () => {
                     height: "100px",
                     backgroundColor: "transparent",
                     transform: "rotate(270deg)",
+                    display: !naveVisibile ? "none" : "block",
                 }}
             />
 
@@ -51,6 +55,7 @@ const SpaceShip = () => {
                     height: "100px",
                     backgroundColor: "transparent",
                     transform: "rotate(45deg)",
+                    display: !naveVisibile ? "none" : "block",
                 }}
                 src={shuttle}
                 alt=""
