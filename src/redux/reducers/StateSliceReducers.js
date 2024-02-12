@@ -5,6 +5,7 @@ const SliceMain = createSlice({
     initialState: {
         MeteorList: [],
         IsSpaceShipVisible: false,
+        siamoStatiColpiti: false,
     },
 
     reducers: {
@@ -22,8 +23,23 @@ const SliceMain = createSlice({
         IsSpaceShipVisibleOFF: (state) => {
             state.IsSpaceShipVisible = false;
         },
+
+        setSiamoStatiColpitiTRUE: (state) => {
+            state.siamoStatiColpiti = true;
+        },
+
+        setSiamoStatiColpitiFALSE: (state) => {
+            state.siamoStatiColpiti = false;
+        },
     },
 });
 
-export const { setArrayMeteoriti, setDeleteMeteorite, IsSpaceShipVisibleOFF, IsSpaceShipVisibleON } = SliceMain.actions;
+export const {
+    setArrayMeteoriti,
+    setDeleteMeteorite,
+    IsSpaceShipVisibleOFF,
+    IsSpaceShipVisibleON,
+    setSiamoStatiColpitiTRUE,
+    setSiamoStatiColpitiFALSE,
+} = SliceMain.actions;
 export default SliceMain.reducer;

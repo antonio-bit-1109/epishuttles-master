@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setSiamoStatiColpitiFALSE, setSiamoStatiColpitiTRUE } from "../redux/reducers/StateSliceReducers";
 
 function Meteor({ position }) {
+    const dispatch = useDispatch();
+    const CollisioneAvvenuta = useSelector((state) => state.MySlice.siamoStatiColpiti);
+    console.log("CollisioneAvvenuta", CollisioneAvvenuta);
     return (
         <>
             {" "}
@@ -10,7 +15,7 @@ function Meteor({ position }) {
             }} */
                 onMouseEnter={() => {
                     /* GameOver(); */
-                    console.log("KABOOM!");
+                    dispatch(setSiamoStatiColpitiTRUE());
                 }}
                 className="Meteor-animation position-relative vieniInSuperfice"
                 style={{ position: "absolute", top: `${position}%` }}
