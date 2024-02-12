@@ -53,20 +53,20 @@
     left: 14%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
 }
 .fire:nth-child(2) {
     top: 5%;
     left: 22%;
     width: 150px;
     height: 150px;
-    z-index: 19;
+    z-index: 10;
     rotate: 20deg;
 }
 .fire:nth-child(3) {
     top: 3%;
     left: 29%;
-    z-index: 19;
+    z-index: 10;
     transform: rotate(35deg); /* Rotazione progressiva */
     width: 150px;
     height: 150px;
@@ -76,7 +76,7 @@
     left: 33%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(65deg);
 }
 .fire:nth-child(5) {
@@ -84,7 +84,7 @@
     left: 38%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(80deg);
 }
 .fire:nth-child(6) {
@@ -92,7 +92,7 @@
     left: 45%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(90deg);
     background-color: transparent;
 }
@@ -101,7 +101,7 @@
     left: 48%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(100deg);
 }
 .fire:nth-child(8) {
@@ -109,7 +109,7 @@
     left: 41%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(110deg);
 }
 .fire:nth-child(9) {
@@ -117,7 +117,7 @@
     left: 41%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(110deg);
 }
 .fire:nth-child(10) {
@@ -125,7 +125,7 @@
     left: 40%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(120deg);
 }
 .fire:nth-child(11) {
@@ -133,7 +133,7 @@
     left: 40%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(130deg);
 }
 .fire:nth-child(12) {
@@ -141,7 +141,7 @@
     left: 30%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(145deg);
 }
 .fire:nth-child(13) {
@@ -149,7 +149,7 @@
     left: 22%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(155deg);
 }
 .fire:nth-child(14) {
@@ -157,7 +157,7 @@
     left: 15%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(165deg);
 }
 .fire:nth-child(15) {
@@ -165,7 +165,7 @@
     left: 15%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(175deg);
 }
 .fire:nth-child(16) {
@@ -173,7 +173,7 @@
     left: 8%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(190deg);
 }
 .fire:nth-child(17) {
@@ -181,7 +181,7 @@
     left: 3%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(200deg);
 }
 .fire:nth-child(18) {
@@ -189,7 +189,7 @@
     left: -3%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(210deg);
 }
 .fire:nth-child(19) {
@@ -197,7 +197,7 @@
     left: -3%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(220deg);
 }
 .fire:nth-child(20) {
@@ -205,7 +205,7 @@
     left: -7%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(230deg);
 }
 .fire:nth-child(21) {
@@ -213,7 +213,7 @@
     left: -10%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(240deg);
 }
 .fire:nth-child(22) {
@@ -221,7 +221,7 @@
     left: -10%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(250deg);
 }
 .fire:nth-child(23) {
@@ -229,7 +229,7 @@
     left: -5%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(265deg);
 }
 .fire:nth-child(24) {
@@ -237,7 +237,7 @@
     left: -3%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(275deg);
 }
 .fire:nth-child(25) {
@@ -245,7 +245,7 @@
     left: -3%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(285deg);
 }
 .fire:nth-child(26) {
@@ -253,7 +253,7 @@
     left: -5%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(295deg);
 }
 .fire:nth-child(27) {
@@ -261,7 +261,7 @@
     left: -7%;
     width: 150px;
     height: 150px;
-    z-index: 11;
+    z-index: 10;
     transform: rotate(305deg);
     /* background-color: red; */
 }
@@ -271,7 +271,7 @@
     left: -6%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(315deg);
 }
 
@@ -280,7 +280,7 @@
     left: 2%;
     width: 150px;
     height: 150px;
-    z-index: 9;
+    z-index: 10;
     transform: rotate(330deg);
 }
 
